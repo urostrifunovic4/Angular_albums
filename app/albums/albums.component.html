@@ -1,0 +1,21 @@
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>userId</th>
+            <th>id</th>
+            <th>title</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of albums">
+            <td> {{a.userId}} </td>
+            <td>  {{a.id}} </td>
+            <td> <a routerLink="/photos/{{a.userId}}"> {{a.title}} </a> </td>
+
+        </tr>
+    </tbody>
+    <tfoot>
+        <p>Ukupno albuma:{{albums?.length}}</p>
+    </tfoot>
+</table>

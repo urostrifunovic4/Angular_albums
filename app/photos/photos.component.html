@@ -1,0 +1,27 @@
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>albumId</th>
+            <th>id</th>
+            <th>title</th>
+            <th>url</th>
+            <th>thumbnailUrl</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of photos" (click)='onClick(p.thumbnailUrl)'>
+            <td> {{p.albumId}} </td>
+            <td>  {{p.id}}  </td>
+            <td> {{p.title}} </td>
+            <td> {{p.url}} </td>
+            <td><img src="{{p.thumbnailUrl}}" height="100px" width="100px"> </td>
+
+
+        </tr>
+    </tbody>
+    <tfoot>
+        <p>Ukupno pps:{{photos?.length}}</p>
+    </tfoot>
+</table>
